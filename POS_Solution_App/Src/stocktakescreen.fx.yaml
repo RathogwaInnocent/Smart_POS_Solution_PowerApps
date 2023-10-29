@@ -1,0 +1,121 @@
+stocktakescreen As screen:
+
+    Icon1_1 As icon.Leave:
+        Color: =RGBA(168, 0, 0, 1)
+        Height: =60
+        Icon: =Icon.Leave
+        PaddingBottom: =10
+        PaddingTop: =10
+        Width: =65
+        X: =1285
+        ZIndex: =1
+
+    Image4_1 As image:
+        Height: =40
+        RadiusBottomLeft: =50
+        RadiusBottomRight: =50
+        RadiusTopLeft: =50
+        RadiusTopRight: =50
+        Width: =41
+        X: =1244
+        Y: =10
+        ZIndex: =2
+
+    Label9_1 As label:
+        Align: =Align.Right
+        Text: ="Cashier - Mary Doe"
+        Width: =304
+        X: =924
+        Y: =10
+        ZIndex: =3
+
+    Label9_2 As label:
+        Text: =Today()
+        Width: =304
+        X: =2
+        Y: =18
+        ZIndex: =4
+
+    Rectangle2 As rectangle:
+        Fill: =RGBA(186, 202, 226, 1)
+        Height: =158
+        Width: =233
+        X: =1052
+        Y: =210
+        ZIndex: =5
+
+    Rectangle2_1 As rectangle:
+        Fill: =RGBA(186, 202, 226, 1)
+        Height: =158
+        Width: =233
+        X: =747
+        Y: =210
+        ZIndex: =6
+
+    Label6 As label:
+        Align: =Align.Center
+        Color: =RGBA(0, 134, 208, 1)
+        Height: =158
+        Size: =40
+        Text: ="1251"
+        Width: =233
+        X: =747
+        Y: =210
+        ZIndex: =7
+
+    Label6_1 As label:
+        Align: =Align.Center
+        Color: =RGBA(0, 134, 208, 1)
+        Height: =158
+        Size: =40
+        Text: ="95"
+        Width: =233
+        X: =1052
+        Y: =210
+        ZIndex: =8
+
+    Label7 As label:
+        Align: =Align.Center
+        Color: =RGBA(116, 116, 116, 1)
+        Height: =32
+        Italic: =true
+        Size: =15
+        Text: ="Total units counted"
+        Width: =233
+        X: =747
+        Y: =178
+        ZIndex: =9
+
+    Label7_1 As label:
+        Align: =Align.Center
+        Color: =RGBA(116, 116, 116, 1)
+        Height: =32
+        Italic: =true
+        Size: =15
+        Text: ="Total items counted"
+        Width: =233
+        X: =1052
+        Y: =178
+        ZIndex: =10
+
+    Checkbox2 As checkbox:
+        Height: =42
+        Text: ="Ready to Submit"
+        Width: =264
+        X: =1052
+        Y: =428
+        ZIndex: =11
+
+    Button1_3 As button:
+        Fill: =RGBA(54, 176, 75, 1)
+        Height: =57
+        RadiusBottomLeft: =0
+        RadiusBottomRight: =0
+        RadiusTopLeft: =0
+        RadiusTopRight: =0
+        Text: ="Submit"
+        Width: =127
+        X: =1052
+        Y: =487
+        ZIndex: =12
+

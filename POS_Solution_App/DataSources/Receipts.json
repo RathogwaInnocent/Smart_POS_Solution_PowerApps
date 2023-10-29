@@ -1,0 +1,130 @@
+[
+  {
+    "CdsFCBContext": "{\"FileType\":true,\"ImageExternalStorage\":true}",
+    "EntitySetName": "tb_receipts",
+    "IsHidden": false,
+    "IsSampleData": false,
+    "IsWritable": true,
+    "LogicalName": "tb_receipt",
+    "Name": "Receipts",
+    "NativeCDSDataSourceInfoNameMapping": {
+      "_ownerid_value": "Owner",
+      "createdby": "Created By",
+      "createdon": "Created On",
+      "createdonbehalfby": "Created By (Delegate)",
+      "exchangerate": "Exchange Rate",
+      "importsequencenumber": "Import Sequence Number",
+      "modifiedby": "Modified By",
+      "modifiedon": "Modified On",
+      "modifiedonbehalfby": "Modified By (Delegate)",
+      "overriddencreatedon": "Record Created On",
+      "owningbusinessunit": "Owning Business Unit",
+      "owningteam": "Owning Team",
+      "owninguser": "Owning User",
+      "statecode": "Status",
+      "statuscode": "Status Reason",
+      "tb_amounttenered": "Amount Tenered",
+      "tb_amounttenered_base": "Amount Tenered (Base)",
+      "tb_CashierIs": "Cashier Is",
+      "tb_change": "Change",
+      "tb_change_base": "Change (Base)",
+      "tb_customer": "Customer",
+      "tb_CustomerIs": "Customer Is",
+      "tb_date": "Date",
+      "tb_name": "Name",
+      "tb_receipt_AsyncOperations": "System Jobs",
+      "tb_receipt_BulkDeleteFailures": "Bulk Delete Failures",
+      "tb_receipt_DuplicateBaseRecord": "Duplicate Records (tb_receipt_DuplicateBaseRecord)",
+      "tb_receipt_DuplicateMatchingRecord": "Duplicate Records (tb_receipt_DuplicateMatchingRecord)",
+      "tb_receipt_MailboxTrackingFolders": "Mailbox Auto Tracking Folders",
+      "tb_receipt_PrincipalObjectAttributeAccesses": "Field Sharing",
+      "tb_receipt_ProcessSession": "Process Sessions",
+      "tb_receipt_SyncErrors": "Sync Errors",
+      "tb_receiptid": "Receipt",
+      "tb_shiftcompleted": "Shift Completed",
+      "tb_tb_receiptitem_Receipt_tb_receipt": "Receipt Items",
+      "tb_totaldue": "Total Due",
+      "tb_totaldue_base": "Total Due (Base)",
+      "timezoneruleversionnumber": "Time Zone Rule Version Number",
+      "transactioncurrencyid": "Currency",
+      "utcconversiontimezonecode": "UTC Conversion Time Zone Code",
+      "versionnumber": "Version Number"
+    },
+    "PreferredName": "Receipts",
+    "Type": "NativeCDSDataSourceInfo"
+  },
+  {
+    "DisplayName": "Receipts (Views)",
+    "Name": "_tb_receipt_views",
+    "RelatedEntityName": "Receipts",
+    "TrimmedViewName": true,
+    "Type": "ViewInfo",
+    "ViewInfoNameMapping": {
+      "42607f91-e7b7-4c52-ab5d-6e49e450ed14": "Receipt Lookup View",
+      "55fd3817-d571-4dc8-92e4-634be941dc1d": "Active Receipts",
+      "82e8d29f-5841-4b95-8115-0530b0bfad1c": "Receipt Advanced Find View",
+      "849828dd-0785-428d-9a1b-5ec2e2164bab": "Inactive Receipts",
+      "f3199d3c-a1d4-4af8-8a5c-ed0fd0668e10": "Receipt Associated View"
+    }
+  },
+  {
+    "DisplayName": "Status (Receipts)",
+    "Name": "tb_receipt_statecode",
+    "OptionSetInfoNameMapping": {
+      "0": "Active",
+      "1": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statecode",
+        "OptionSetReferenceEntityName": "Receipts"
+      }
+    },
+    "OptionSetTypeKey": "StateType",
+    "RelatedColumnInvariantName": "statecode",
+    "RelatedEntityName": "Receipts",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Status Reason (Receipts)",
+    "Name": "tb_receipt_statuscode",
+    "OptionSetInfoNameMapping": {
+      "1": "Active",
+      "2": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statuscode",
+        "OptionSetReferenceEntityName": "Receipts"
+      }
+    },
+    "OptionSetTypeKey": "StatusType",
+    "RelatedColumnInvariantName": "statuscode",
+    "RelatedEntityName": "Receipts",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Shift Completed (Receipts)",
+    "Name": "tb_receipt_tb_shiftcompleted",
+    "OptionSetInfoNameMapping": {
+      "0": "No",
+      "1": "Yes"
+    },
+    "OptionSetIsBooleanValued": true,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "tb_shiftcompleted",
+        "OptionSetReferenceEntityName": "Receipts"
+      }
+    },
+    "OptionSetTypeKey": "BooleanType",
+    "RelatedColumnInvariantName": "tb_shiftcompleted",
+    "RelatedEntityName": "Receipts",
+    "Type": "OptionSetInfo"
+  }
+]

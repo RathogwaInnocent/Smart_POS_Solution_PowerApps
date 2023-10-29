@@ -1,0 +1,104 @@
+[
+  {
+    "CdsFCBContext": "{\"FileType\":true,\"ImageExternalStorage\":true}",
+    "EntitySetName": "tb_stockcountitems",
+    "IsHidden": false,
+    "IsSampleData": false,
+    "IsWritable": true,
+    "LogicalName": "tb_stockcountitem",
+    "Name": "Stock Count Items",
+    "NativeCDSDataSourceInfoNameMapping": {
+      "_ownerid_value": "Owner",
+      "{Attachments}": "Attachments",
+      "createdby": "Created By",
+      "createdon": "Created On",
+      "createdonbehalfby": "Created By (Delegate)",
+      "importsequencenumber": "Import Sequence Number",
+      "modifiedby": "Modified By",
+      "modifiedon": "Modified On",
+      "modifiedonbehalfby": "Modified By (Delegate)",
+      "overriddencreatedon": "Record Created On",
+      "owningbusinessunit": "Owning Business Unit",
+      "owningteam": "Owning Team",
+      "owninguser": "Owning User",
+      "statecode": "Status",
+      "statuscode": "Status Reason",
+      "tb_damagedcount": "Damaged Count",
+      "tb_instockcount": "In-Stock Count",
+      "tb_name": "Name",
+      "tb_productcode": "Product Code",
+      "tb_stockcountitem_Annotations": "Notes",
+      "tb_stockcountitem_AsyncOperations": "System Jobs",
+      "tb_stockcountitem_BulkDeleteFailures": "Bulk Delete Failures",
+      "tb_stockcountitem_DuplicateBaseRecord": "Duplicate Records (tb_stockcountitem_DuplicateBaseRecord)",
+      "tb_stockcountitem_DuplicateMatchingRecord": "Duplicate Records (tb_stockcountitem_DuplicateMatchingRecord)",
+      "tb_stockcountitem_MailboxTrackingFolders": "Mailbox Auto Tracking Folders",
+      "tb_stockcountitem_PrincipalObjectAttributeAccesses": "Field Sharing",
+      "tb_stockcountitem_ProcessSession": "Process Sessions",
+      "tb_stockcountitem_SyncErrors": "Sync Errors",
+      "tb_stockcountitemid": "Stock Count Item",
+      "tb_StockCountRecord": "Stock Count Record",
+      "tb_systemdamaged": "System Damaged",
+      "tb_systeminstock": "System In Stock",
+      "timezoneruleversionnumber": "Time Zone Rule Version Number",
+      "utcconversiontimezonecode": "UTC Conversion Time Zone Code",
+      "versionnumber": "Version Number"
+    },
+    "PreferredName": "Stock Count Items",
+    "Type": "NativeCDSDataSourceInfo"
+  },
+  {
+    "DisplayName": "Stock Count Items (Views)",
+    "Name": "_tb_stockcountitem_views",
+    "RelatedEntityName": "Stock Count Items",
+    "TrimmedViewName": true,
+    "Type": "ViewInfo",
+    "ViewInfoNameMapping": {
+      "68f51a16-0a0f-4d62-bad6-a1cecc90e433": "Stock Count Item Lookup View",
+      "c8a02e24-bed7-4305-a693-54407c7c1d11": "Stock Count Item Advanced Find View",
+      "d57ec8ee-785e-46ff-a641-f88dc6b66ccb": "Active Stock Count Items",
+      "e6482a06-3cfb-4bde-9942-329f0583b272": "Stock Count Item Associated View",
+      "f72fe581-1e61-4dc9-873c-3f0575cf5454": "Inactive Stock Count Items"
+    }
+  },
+  {
+    "DisplayName": "Status (Stock Count Items)",
+    "Name": "tb_stockcountitem_statecode",
+    "OptionSetInfoNameMapping": {
+      "0": "Active",
+      "1": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statecode",
+        "OptionSetReferenceEntityName": "Stock Count Items"
+      }
+    },
+    "OptionSetTypeKey": "StateType",
+    "RelatedColumnInvariantName": "statecode",
+    "RelatedEntityName": "Stock Count Items",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Status Reason (Stock Count Items)",
+    "Name": "tb_stockcountitem_statuscode",
+    "OptionSetInfoNameMapping": {
+      "1": "Active",
+      "2": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statuscode",
+        "OptionSetReferenceEntityName": "Stock Count Items"
+      }
+    },
+    "OptionSetTypeKey": "StatusType",
+    "RelatedColumnInvariantName": "statuscode",
+    "RelatedEntityName": "Stock Count Items",
+    "Type": "OptionSetInfo"
+  }
+]

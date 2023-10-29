@@ -1,0 +1,101 @@
+[
+  {
+    "CdsFCBContext": "{\"FileType\":true,\"ImageExternalStorage\":true}",
+    "EntitySetName": "tb_receiptitems",
+    "IsHidden": false,
+    "IsSampleData": false,
+    "IsWritable": true,
+    "LogicalName": "tb_receiptitem",
+    "Name": "Receipt Items",
+    "NativeCDSDataSourceInfoNameMapping": {
+      "_ownerid_value": "Owner",
+      "createdby": "Created By",
+      "createdon": "Created On",
+      "createdonbehalfby": "Created By (Delegate)",
+      "exchangerate": "Exchange Rate",
+      "importsequencenumber": "Import Sequence Number",
+      "modifiedby": "Modified By",
+      "modifiedon": "Modified On",
+      "modifiedonbehalfby": "Modified By (Delegate)",
+      "overriddencreatedon": "Record Created On",
+      "owningbusinessunit": "Owning Business Unit",
+      "owningteam": "Owning Team",
+      "owninguser": "Owning User",
+      "statecode": "Status",
+      "statuscode": "Status Reason",
+      "tb_amount": "Amount",
+      "tb_amount_base": "Amount (Base)",
+      "tb_name": "Name",
+      "tb_Receipt": "Receipt",
+      "tb_receiptitem_AsyncOperations": "System Jobs",
+      "tb_receiptitem_BulkDeleteFailures": "Bulk Delete Failures",
+      "tb_receiptitem_DuplicateBaseRecord": "Duplicate Records (tb_receiptitem_DuplicateBaseRecord)",
+      "tb_receiptitem_DuplicateMatchingRecord": "Duplicate Records (tb_receiptitem_DuplicateMatchingRecord)",
+      "tb_receiptitem_MailboxTrackingFolders": "Mailbox Auto Tracking Folders",
+      "tb_receiptitem_PrincipalObjectAttributeAccesses": "Field Sharing",
+      "tb_receiptitem_ProcessSession": "Process Sessions",
+      "tb_receiptitem_SyncErrors": "Sync Errors",
+      "tb_receiptitemid": "Receipt Item",
+      "timezoneruleversionnumber": "Time Zone Rule Version Number",
+      "transactioncurrencyid": "Currency",
+      "utcconversiontimezonecode": "UTC Conversion Time Zone Code",
+      "versionnumber": "Version Number"
+    },
+    "PreferredName": "Receipt Items",
+    "Type": "NativeCDSDataSourceInfo"
+  },
+  {
+    "DisplayName": "Receipt Items (Views)",
+    "Name": "_tb_receiptitem_views",
+    "RelatedEntityName": "Receipt Items",
+    "TrimmedViewName": true,
+    "Type": "ViewInfo",
+    "ViewInfoNameMapping": {
+      "375e0e8e-26d2-42cb-b087-e5619ee78de4": "Active Receipt Items",
+      "57f078de-a590-429a-be33-e6395af019df": "Receipt Item Associated View",
+      "59772c93-96ad-4cd2-8fab-dc676e90e1c9": "Inactive Receipt Items",
+      "65a56758-fea1-4e2d-934b-d7e532f2dfbb": "Receipt Item Lookup View",
+      "e015289a-3291-4573-afea-69784c0dca6b": "Receipt Item Advanced Find View"
+    }
+  },
+  {
+    "DisplayName": "Status (Receipt Items)",
+    "Name": "tb_receiptitem_statecode",
+    "OptionSetInfoNameMapping": {
+      "0": "Active",
+      "1": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statecode",
+        "OptionSetReferenceEntityName": "Receipt Items"
+      }
+    },
+    "OptionSetTypeKey": "StateType",
+    "RelatedColumnInvariantName": "statecode",
+    "RelatedEntityName": "Receipt Items",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Status Reason (Receipt Items)",
+    "Name": "tb_receiptitem_statuscode",
+    "OptionSetInfoNameMapping": {
+      "1": "Active",
+      "2": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statuscode",
+        "OptionSetReferenceEntityName": "Receipt Items"
+      }
+    },
+    "OptionSetTypeKey": "StatusType",
+    "RelatedColumnInvariantName": "statuscode",
+    "RelatedEntityName": "Receipt Items",
+    "Type": "OptionSetInfo"
+  }
+]

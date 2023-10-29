@@ -1,0 +1,846 @@
+cashierscreen As screen:
+
+    Rectangle1_1 As rectangle:
+        BorderColor: =RGBA(202, 202, 202, 1)
+        BorderThickness: =2
+        Fill: =RGBA(255, 255, 255, 1)
+        Height: =596
+        Width: =430
+        X: =468
+        Y: =155
+        ZIndex: =1
+
+    Rectangle1_3 As rectangle:
+        BorderColor: =RGBA(202, 202, 202, 1)
+        BorderThickness: =2
+        Fill: =RGBA(255, 255, 255, 1)
+        Height: =290
+        Width: =389
+        X: =488
+        Y: =171
+        ZIndex: =2
+
+    Rectangle1 As rectangle:
+        BorderColor: =RGBA(202, 202, 202, 1)
+        BorderThickness: =2
+        Fill: =RGBA(0, 0, 0, 0)
+        Height: =599
+        Width: =430
+        X: =12
+        Y: =155
+        ZIndex: =3
+
+    Rectangle1_2 As rectangle:
+        BorderColor: =RGBA(202, 202, 202, 1)
+        BorderThickness: =2
+        Fill: =RGBA(0, 0, 0, 0)
+        Height: =694
+        Width: =430
+        X: =924
+        Y: =60
+        ZIndex: =4
+
+    Label4 As label:
+        Align: =Align.Right
+        Color: =RGBA(128, 128, 128, 1)
+        FontWeight: =FontWeight.Bold
+        Height: =33
+        Size: =16
+        Text: ="Change"
+        X: =727
+        Y: =60
+        ZIndex: =5
+
+    searchtext As text:
+        BorderColor: =RGBA(116, 116, 116, 1)
+        Default: =Concat(Number,Value)
+        Height: =42
+        HintText: ="Enter product code"
+        Italic: =true
+        Width: =389
+        X: =29
+        Y: =171
+        ZIndex: =6
+
+    membernumber As text:
+        BorderColor: =RGBA(116, 116, 116, 1)
+        Default: =""
+        Height: =34
+        HintText: ="Scan member card"
+        Italic: =true
+        Width: =344
+        X: =509
+        Y: =190
+        ZIndex: =7
+
+    firstname As text:
+        BorderColor: =RGBA(116, 116, 116, 1)
+        Default: =""
+        Height: =34
+        HintText: ="First name"
+        Italic: =true
+        Width: =344
+        X: =509
+        Y: =235
+        ZIndex: =8
+
+    lastname As text:
+        BorderColor: =RGBA(116, 116, 116, 1)
+        Default: =""
+        Height: =34
+        HintText: ="Last name"
+        Italic: =true
+        Width: =344
+        X: =509
+        Y: =280
+        ZIndex: =9
+
+    email As text:
+        BorderColor: =RGBA(116, 116, 116, 1)
+        Default: =""
+        Height: =34
+        HintText: ="Email"
+        Italic: =true
+        Width: =344
+        X: =509
+        Y: =324
+        ZIndex: =10
+
+    mobile As text:
+        BorderColor: =RGBA(116, 116, 116, 1)
+        Default: =""
+        Height: =34
+        HintText: ="Mobile"
+        Italic: =true
+        Width: =344
+        X: =509
+        Y: =368
+        ZIndex: =11
+
+    Button1 As button:
+        Fill: =RGBA(54, 176, 75, 1)
+        Height: =41
+        OnSelect: |-
+            =Patch(
+                Contacts,
+                Defaults(Contacts),
+                {
+                    'First Name': firstname.Text,
+                    'Last Name': lastname.Text,
+                    Email: email.Text,
+                    'Mobile Phone': mobile.Text,
+                    'Loyalty Member': true
+                }
+            );
+            ClearCollect(
+                loyaltymember,
+                LookUp(
+                    Contacts,
+                    Email = email.Text
+                )
+            );
+            Reset(firstname);
+            Reset(lastname);
+            Reset(email);
+            Reset(mobile)
+        RadiusBottomLeft: =0
+        RadiusBottomRight: =0
+        RadiusTopLeft: =0
+        RadiusTopRight: =0
+        Text: ="Save"
+        Width: =111
+        X: =509
+        Y: =413
+        ZIndex: =12
+
+    Checkbox1 As checkbox:
+        CheckboxBorderColor: =RGBA(116, 116, 116, 1)
+        Text: ="Send specials"
+        Width: =200
+        X: =620
+        Y: =408
+        ZIndex: =13
+
+    Rectangle1_4 As rectangle:
+        BorderColor: =RGBA(202, 202, 202, 1)
+        BorderThickness: =2
+        Fill: =RGBA(255, 255, 255, 1)
+        Height: =259
+        Width: =389
+        X: =488
+        Y: =475
+        ZIndex: =14
+
+    buttonseven As button:
+        BorderColor: =ColorFade(Self.Fill, -40%)
+        Color: =RGBA(116, 116, 116, 1)
+        Fill: =RGBA(255, 255, 255, 1)
+        Height: =70
+        OnSelect: =Collect(Number,"7")
+        RadiusBottomLeft: =0
+        RadiusBottomRight: =0
+        RadiusTopLeft: =0
+        RadiusTopRight: =0
+        Text: ="7"
+        Width: =80
+        X: =54
+        Y: =360
+        ZIndex: =15
+
+    buttoneight As button:
+        BorderColor: =ColorFade(Self.Fill, -40%)
+        Color: =RGBA(116, 116, 116, 1)
+        Fill: =RGBA(255, 255, 255, 1)
+        Height: =70
+        OnSelect: =Collect(Number,"8")
+        RadiusBottomLeft: =0
+        RadiusBottomRight: =0
+        RadiusTopLeft: =0
+        RadiusTopRight: =0
+        Text: ="8"
+        Width: =80
+        X: =181
+        Y: =360
+        ZIndex: =16
+
+    buttonnine As button:
+        BorderColor: =ColorFade(Self.Fill, -40%)
+        Color: =RGBA(116, 116, 116, 1)
+        Fill: =RGBA(255, 255, 255, 1)
+        Height: =70
+        OnSelect: =Collect(Number,"9")
+        RadiusBottomLeft: =0
+        RadiusBottomRight: =0
+        RadiusTopLeft: =0
+        RadiusTopRight: =0
+        Text: ="9"
+        Width: =80
+        X: =317
+        Y: =360
+        ZIndex: =17
+
+    buttonfour As button:
+        BorderColor: =ColorFade(Self.Fill, -40%)
+        Color: =RGBA(116, 116, 116, 1)
+        Fill: =RGBA(255, 255, 255, 1)
+        Height: =70
+        OnSelect: =Collect(Number,"4")
+        RadiusBottomLeft: =0
+        RadiusBottomRight: =0
+        RadiusTopLeft: =0
+        RadiusTopRight: =0
+        Text: ="4"
+        Width: =80
+        X: =54
+        Y: =439
+        ZIndex: =18
+
+    buttonfive As button:
+        BorderColor: =ColorFade(Self.Fill, -40%)
+        Color: =RGBA(116, 116, 116, 1)
+        Fill: =RGBA(255, 255, 255, 1)
+        Height: =70
+        OnSelect: =Collect(Number,"5")
+        RadiusBottomLeft: =0
+        RadiusBottomRight: =0
+        RadiusTopLeft: =0
+        RadiusTopRight: =0
+        Text: ="5"
+        Width: =80
+        X: =181
+        Y: =439
+        ZIndex: =19
+
+    buttonsix As button:
+        BorderColor: =ColorFade(Self.Fill, -40%)
+        Color: =RGBA(116, 116, 116, 1)
+        Fill: =RGBA(255, 255, 255, 1)
+        Height: =70
+        OnSelect: =Collect(Number,"6")
+        RadiusBottomLeft: =0
+        RadiusBottomRight: =0
+        RadiusTopLeft: =0
+        RadiusTopRight: =0
+        Text: ="6"
+        Width: =80
+        X: =317
+        Y: =439
+        ZIndex: =20
+
+    buttonzero As button:
+        BorderColor: =ColorFade(Self.Fill, -40%)
+        Color: =RGBA(116, 116, 116, 1)
+        Fill: =RGBA(255, 255, 255, 1)
+        Height: =70
+        OnSelect: =Collect(Number,"0")
+        RadiusBottomLeft: =0
+        RadiusBottomRight: =0
+        RadiusTopLeft: =0
+        RadiusTopRight: =0
+        Text: ="0"
+        Width: =80
+        X: =181
+        Y: =597
+        ZIndex: =22
+
+    buttonclear As button:
+        Color: =RGBA(128, 128, 128, 1)
+        Fill: =RGBA(255, 255, 0, 1)
+        Height: =70
+        OnSelect: =Clear(Number)
+        RadiusBottomLeft: =0
+        RadiusBottomRight: =0
+        RadiusTopLeft: =0
+        RadiusTopRight: =0
+        Text: ="Clr"
+        Width: =80
+        X: =317
+        Y: =597
+        ZIndex: =23
+
+    buttonenter As button:
+        DisplayMode: =If(paidicon.Visible = false And !IsBlank(tendered.Text),DisplayMode.Edit,DisplayMode.Disabled)
+        Fill: =RGBA(54, 176, 75, 1)
+        Height: =58
+        OnSelect: |-
+            =Set(
+                receiptis,
+                CreateReceipt.Run(
+                    "Sale : " & Now(),
+                    If(
+                        IsBlank(First(loyaltymember).Contact),
+                        "1bd8a116-0175-ee11-8179-6045bdd2c482",
+                        First(loyaltymember).Contact
+                    ),
+                    First(useris).Contact,
+                    Value(
+                        Mid(
+                            total.Text,
+                            2,
+                            10
+                        )
+                    ),
+                    Value(tendered.Text),
+                    Value(
+                        Mid(
+                            Label22.Text,
+                            2,
+                            10
+                        )
+                    )
+                )
+            );
+            UpdateContext({piad:true})
+        RadiusBottomLeft: =0
+        RadiusBottomRight: =0
+        RadiusTopLeft: =0
+        RadiusTopRight: =0
+        Text: ="Paid"
+        Width: =345
+        X: =52
+        Y: =676
+        ZIndex: =24
+
+    Label5 As label:
+        Size: =20
+        Text: ="Receipt"
+        X: =935
+        Y: =70
+        ZIndex: =25
+
+    Label5_1 As label:
+        Size: =15
+        Text: ="Checkout Items"
+        Width: =245
+        X: =935
+        Y: =224
+        ZIndex: =26
+
+    businessnames As label:
+        FontWeight: =FontWeight.Bold
+        Height: =21
+        Size: =10
+        Text: ="Corner Cafe'"
+        X: =935
+        Y: =120
+        ZIndex: =27
+
+    businessaddress As label:
+        Height: =39
+        Size: =10
+        Text: ="Corner Main & Eloff Street Johannesburg 2000"
+        Width: =224
+        X: =935
+        Y: =141
+        ZIndex: =28
+
+    businesscontact As label:
+        Height: =34
+        Size: =10
+        Text: |-
+            ="Email : customerservice@cornercafe.com Call : 1 800 000 000"
+        Width: =267
+        X: =935
+        Y: =174
+        ZIndex: =29
+
+    Label5_2 As label:
+        Height: =20
+        Size: =12
+        Text: ="Customer Details"
+        Width: =245
+        X: =935
+        Y: =574
+        ZIndex: =30
+
+    Label8 As label:
+        Height: =21
+        Size: =10
+        Text: |-
+            ="Full Name : " & First(loyaltymember).'Full Name'
+        Width: =210
+        X: =935
+        Y: =594
+        ZIndex: =31
+
+    Label8_1 As label:
+        Height: =20
+        Size: =10
+        Text: |-
+            ="Email Address : " & First(loyaltymember).Email
+        Width: =245
+        X: =935
+        Y: =615
+        ZIndex: =32
+
+    Label8_2 As label:
+        Height: =21
+        Size: =10
+        Text: |-
+            ="Mobile number : " & First(loyaltymember).'Mobile Phone'
+        Width: =224
+        X: =935
+        Y: =635
+        ZIndex: =33
+
+    memberstatus As label:
+        Height: =11
+        Size: =10
+        Text: |-
+            ="Loyalty Member : " & First(loyaltymember).'Loyalty Member' & " - "& First(loyaltymember).'Member Number'
+        Width: =210
+        X: =935
+        Y: =656
+        ZIndex: =34
+
+    Button1_2 As button:
+        DisplayMode: =If(paidicon.Visible = true, DisplayMode.Edit, DisplayMode.Disabled)
+        Fill: =RGBA(54, 176, 75, 1)
+        Height: =41
+        OnSelect: |-
+            =ForAll(
+                itemsselected,
+                Patch(
+                    'Receipt Items',
+                    Defaults('Receipt Items'),
+                    {
+                        Name: ThisRecord.Name,
+                        Amount: ThisRecord.'Selling Price',
+                        Receipt: LookUp(
+                            Receipts,
+                            Text(Receipt) = receiptis.receiptid
+                        )
+                    }
+                )
+            );
+            
+            Set(customerreceipt, receipt.Text);
+            Clear(loyaltymember);
+            Clear(itemsselected);
+            Reset(tendered);
+            Reset(membernumber);
+            Set(receiptis,Blank());
+            UpdateContext({piad: false});
+        RadiusBottomLeft: =0
+        RadiusBottomRight: =0
+        RadiusTopLeft: =0
+        RadiusTopRight: =0
+        Text: ="Save"
+        Width: =111
+        X: =935
+        Y: =693
+        ZIndex: =35
+
+    Label5_3 As label:
+        Align: =Align.Right
+        FontWeight: =FontWeight.Bold
+        Height: =21
+        Size: =15
+        Text: ="Total"
+        X: =1180
+        Y: =594
+        ZIndex: =36
+
+    total As label:
+        Align: =Align.Right
+        Height: =46
+        Size: =30
+        Text: |-
+            =Text(
+                If(
+                    "Yes" in memberstatus,
+                    Sum(
+                        itemsselected,
+                        'Selling Price'
+                    ) - Sum(
+                        itemsselected,
+                        'Selling Price'
+                    ) * 0.1,
+                    Sum(
+                        itemsselected,
+                        'Selling Price'
+                    )
+                ),
+                "[$-en-US]R##,###.00"
+            )
+        X: =1180
+        Y: =615
+        ZIndex: =37
+
+    Icon1 As icon.Leave:
+        Color: =RGBA(168, 0, 0, 1)
+        Height: =60
+        Icon: =Icon.Leave
+        PaddingBottom: =10
+        PaddingTop: =10
+        Width: =65
+        X: =1285
+        ZIndex: =38
+
+    Image4 As image:
+        Height: =40
+        RadiusBottomLeft: =50
+        RadiusBottomRight: =50
+        RadiusTopLeft: =50
+        RadiusTopRight: =50
+        Width: =41
+        X: =1244
+        Y: =10
+        ZIndex: =39
+
+    Label9 As label:
+        Align: =Align.Right
+        Text: ="Cashier - Mary Doe"
+        Width: =304
+        X: =924
+        Y: =10
+        ZIndex: =40
+
+    Label10 As label:
+        Align: =Align.Right
+        BorderColor: =RGBA(54, 176, 75, 1)
+        BorderThickness: =2
+        Height: =81
+        Size: =25
+        Text: =
+        Width: =430
+        X: =12
+        Y: =60
+        ZIndex: =41
+
+    buttonzero_1 As button:
+        BorderColor: =ColorFade(Self.Fill, -40%)
+        Color: =RGBA(116, 116, 116, 1)
+        Fill: =RGBA(255, 255, 255, 1)
+        Height: =70
+        OnSelect: =Collect(Number,"00")
+        RadiusBottomLeft: =0
+        RadiusBottomRight: =0
+        RadiusTopLeft: =0
+        RadiusTopRight: =0
+        Text: ="00"
+        Width: =80
+        X: =54
+        Y: =597
+        ZIndex: =44
+
+    buttonfour_1 As button:
+        BorderColor: =ColorFade(Self.Fill, -40%)
+        Color: =RGBA(116, 116, 116, 1)
+        Fill: =RGBA(255, 255, 255, 1)
+        Height: =70
+        OnSelect: =Collect(Number,"1")
+        RadiusBottomLeft: =0
+        RadiusBottomRight: =0
+        RadiusTopLeft: =0
+        RadiusTopRight: =0
+        Text: ="1"
+        Width: =80
+        X: =54
+        Y: =518
+        ZIndex: =45
+
+    buttonfive_1 As button:
+        BorderColor: =ColorFade(Self.Fill, -40%)
+        Color: =RGBA(116, 116, 116, 1)
+        Fill: =RGBA(255, 255, 255, 1)
+        Height: =70
+        OnSelect: =Collect(Number,"2")
+        RadiusBottomLeft: =0
+        RadiusBottomRight: =0
+        RadiusTopLeft: =0
+        RadiusTopRight: =0
+        Text: ="2"
+        Width: =80
+        X: =181
+        Y: =518
+        ZIndex: =46
+
+    buttonsix_1 As button:
+        BorderColor: =ColorFade(Self.Fill, -40%)
+        Color: =RGBA(116, 116, 116, 1)
+        Fill: =RGBA(255, 255, 255, 1)
+        Height: =70
+        OnSelect: =Collect(Number,"3")
+        RadiusBottomLeft: =0
+        RadiusBottomRight: =0
+        RadiusTopLeft: =0
+        RadiusTopRight: =0
+        Text: ="3"
+        Width: =80
+        X: =317
+        Y: =518
+        ZIndex: =47
+
+    Gallery2 As gallery.galleryVertical:
+        DelayItemLoading: =true
+        Height: =124
+        Items: =First(Filter(Items,Text('Availability ') = "Available",Text('Product Code') = searchtext.Text))
+        Layout: =Layout.Vertical
+        LoadingSpinner: =LoadingSpinner.Data
+        TemplateSize: =119
+        Width: =405
+        X: =27
+        Y: =220
+        ZIndex: =48
+
+        Image2 As image:
+            Image: =ThisItem.Image
+            OnSelect: =Select(Parent)
+            X: =12
+            Y: =8
+            ZIndex: =1
+
+        Label2 As label:
+            Height: =31
+            OnSelect: =Select(Parent)
+            Text: |-
+                ="Product Name : " & ThisItem.Name
+            Width: =213
+            X: =112
+            Y: =21
+            ZIndex: =2
+
+        Label3 As label:
+            Height: =27
+            OnSelect: =Select(Parent)
+            Text: |-
+                ="Product Code : " & ThisItem.'Product Code'
+            Width: =202
+            X: =112
+            Y: =52
+            ZIndex: =3
+
+        Label15 As label:
+            Height: =29
+            OnSelect: =Select(Parent)
+            Text: |-
+                ="Price : " & Text(ThisItem.'Selling Price', "[$-en-US]R##,###.00")
+            Width: =202
+            X: =112
+            Y: =79
+            ZIndex: =4
+
+        Icon2 As icon.Add:
+            Color: =RGBA(54, 176, 75, 1)
+            Height: =60
+            Icon: =Icon.Add
+            OnSelect: |-
+                =Select(Parent);
+                Collect(
+                    itemsselected,
+                    ThisItem
+                );
+                Patch(
+                    Items,
+                    ThisItem,
+                    {'Availability ': 'Availability '.Reserved}
+                );
+                Reset(searchtext);
+                Clear(Number)
+            Width: =46
+            X: =341
+            Y: =35
+            ZIndex: =5
+
+    Gallery3 As gallery.galleryVertical:
+        DelayItemLoading: =true
+        Height: =259
+        Items: =itemsselected
+        Layout: =Layout.Vertical
+        LoadingSpinner: =LoadingSpinner.Data
+        TemplateSize: =78
+        Width: =383
+        X: =488
+        Y: =475
+        ZIndex: =49
+
+        Image3 As image:
+            Height: =70
+            Image: =ThisItem.Image
+            OnSelect: =Select(Parent)
+            Width: =86
+            X: =4
+            Y: =4
+            ZIndex: =1
+
+        Label16 As label:
+            Height: =30
+            OnSelect: =Select(Parent)
+            Text: |-
+                ="Product Name : " & ThisItem.Name
+            Width: =235
+            X: =90
+            Y: =4
+            ZIndex: =2
+
+        Label17 As label:
+            OnSelect: =Select(Parent)
+            Text: |-
+                ="Price : " & Text(ThisItem.'Selling Price', "[$-en-US]R##,###.00")
+            Width: =188
+            X: =90
+            Y: =34
+            ZIndex: =3
+
+        Icon3 As icon.CancelBadge:
+            Height: =35
+            Icon: =Icon.CancelBadge
+            OnSelect: =CancelSale.Run(Text(ThisItem.tb_itemsid,"[en-US]"));Remove(itemsselected,ThisItem)
+            Width: =24
+            X: =337
+            Y: =39
+            ZIndex: =4
+
+    allitems As label:
+        Text: =Concat(itemsselected,tb_itemsid & ",")
+        Width: =574
+        X: =27
+        Y: =10
+        ZIndex: =50
+
+    Icon4 As icon.Search:
+        Height: =28
+        Icon: =Icon.Search
+        OnSelect: =ClearCollect(loyaltymember,LookUp(Contacts,'Member Number' = membernumber.Text))
+        Width: =33
+        X: =814
+        Y: =193
+        ZIndex: =51
+
+    Icon5 As icon.Cancel:
+        Height: =30
+        Icon: =Icon.Cancel
+        OnSelect: =Clear(loyaltymember);Reset(membernumber)
+        Width: =26
+        X: =786
+        Y: =190
+        ZIndex: =52
+
+    Gallery4 As gallery.galleryVertical:
+        DelayItemLoading: =true
+        Height: =300
+        Items: =itemsselected
+        Layout: =Layout.Vertical
+        LoadingSpinner: =LoadingSpinner.Data
+        TemplateSize: =70
+        Width: =387
+        X: =943
+        Y: =261
+        ZIndex: =53
+
+        Label19 As label:
+            OnSelect: =Select(Parent)
+            Text: =ThisItem.Name
+            X: =8
+            Y: =16
+            ZIndex: =1
+
+        Label20 As label:
+            Align: =Align.Right
+            OnSelect: =Select(Parent)
+            Text: |-
+                =Text(ThisItem.'Selling Price',"[$-en-US]R##,###.00")
+            X: =158
+            Y: =16
+            ZIndex: =2
+
+    Label21 As label:
+        Align: =Align.Right
+        Height: =37
+        Text: =If("Yes" in memberstatus,"Discount Applied 10%","Discount 0%")
+        Width: =194
+        X: =1145
+        Y: =656
+        ZIndex: =54
+
+    Label22 As label:
+        Align: =Align.Right
+        FontWeight: =FontWeight.Bold
+        Height: =48
+        Size: =25
+        Text: |-
+            =If(IsBlank(tendered),"",Text(tendered.Text - Mid(total.Text,2,10),"[$-en-US]R##,###.00"))
+        Width: =207
+        X: =664
+        Y: =93
+        ZIndex: =55
+
+    tendered As text:
+        BorderStyle: =BorderStyle.None
+        Default: ="Text input"
+        Format: =TextFormat.Number
+        Height: =65
+        HoverFill: =RGBA(237, 237, 237, 1)
+        Width: =378
+        X: =54
+        Y: =70
+        ZIndex: =56
+
+    Label23 As label:
+        FontWeight: =FontWeight.Bold
+        Height: =33
+        Size: =25
+        Text: ="R"
+        Width: =35
+        X: =19
+        Y: =60
+        ZIndex: =57
+
+    paidicon As icon.CheckBadge:
+        Height: =44
+        Icon: =Icon.CheckBadge
+        Visible: =If(piad = true, true,false)
+        Width: =52
+        X: =1278
+        Y: =85
+        ZIndex: =58
+
+    receipt As label:
+        Height: =29
+        Text: =receiptis.receiptid
+        Width: =319
+        X: =938
+        Y: =206
+        ZIndex: =59
+

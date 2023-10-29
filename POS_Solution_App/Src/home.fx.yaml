@@ -1,0 +1,142 @@
+home As screen:
+    OnVisible: |
+        =UpdateContext({resettext: !resettext});
+        UpdateContext({resettext: !resettext})
+
+    heroimage As image:
+        Height: =768
+        Image: =home_background
+        Width: =919
+        X: =447
+        ZIndex: =1
+
+    lefttitle As label:
+        Color: =RGBA(115, 115, 115, 1)
+        Fill: =RGBA(255, 255, 255, 1)
+        Font: =Font.Verdana
+        Height: =43
+        Italic: =true
+        Size: =21
+        Text: ="Start Shift"
+        Width: =192
+        X: =60
+        Y: =184
+        ZIndex: =2
+
+    cashierid As text:
+        BorderColor: =RGBA(116, 116, 116, 1)
+        Default: =""
+        HintText: ="Cashier ID"
+        Italic: =true
+        Reset: =resettext
+        X: =60
+        Y: =239
+        ZIndex: =3
+
+    startingfloat As text:
+        BorderColor: =RGBA(116, 116, 116, 1)
+        Default: =""
+        HintText: ="Starting Float"
+        Italic: =true
+        Reset: =resettext
+        X: =60
+        Y: =309
+        ZIndex: =4
+
+    pinnumber As text:
+        BorderColor: =RGBA(116, 116, 116, 1)
+        Default: =""
+        HintText: ="PIN Number"
+        Italic: =true
+        Reset: =resettext
+        X: =60
+        Y: =383
+        ZIndex: =5
+
+    cashiericon As image:
+        Image: =cash_register_icon
+        OnSelect: |-
+            =ClearCollect(
+                useris,
+                LookUp(
+                    Contacts,
+                    Text(Contact) = contactrecordid.Text
+                )
+            );
+            
+            If(
+                !IsBlank(startingfloat.Text),
+                ClearCollect(
+                    float,
+                    {amount: startingfloat.Text}
+                )
+            );
+            
+            Navigate(
+                cashierscreen,
+                ScreenTransition.Fade
+            )
+        PaddingBottom: =10
+        PaddingLeft: =10
+        PaddingRight: =10
+        PaddingTop: =10
+        Visible: =If(IsBlank(contactrecordid.Text), false,true)
+        X: =60
+        Y: =444
+        ZIndex: =6
+
+    stocktakeicon As image:
+        Image: =stock_take_icon
+        PaddingBottom: =10
+        PaddingLeft: =10
+        PaddingRight: =10
+        PaddingTop: =10
+        Visible: =If(IsBlank(contactrecordid.Text), false,true)   
+        X: =222
+        Y: =444
+        ZIndex: =7
+
+    welcometitle As label:
+        Color: =RGBA(255, 255, 255, 1)
+        Height: =98
+        Italic: =true
+        Size: =50
+        Text: ="Welcome"
+        Width: =275
+        X: =1000
+        Y: =30
+        ZIndex: =8
+
+    subtitle As label:
+        Align: =Align.Right
+        Color: =RGBA(255, 255, 255, 1)
+        Height: =42
+        Italic: =true
+        Text: ="Smart POS Solution"
+        Width: =264
+        X: =1000
+        Y: =103
+        ZIndex: =9
+
+    contactrecordid As label:
+        Text: |-
+            =If(
+                IsBlank(
+                    LookUp(
+                        Contacts,
+                        tb_id = Value(cashierid.Text) And tb_pinnumber = Value(pinnumber.Text) And !IsBlank(tb_id)
+                    )
+                ),
+                "",
+                LookUp(
+                    Contacts,
+                    tb_id = Value(cashierid.Text) And tb_pinnumber = Value(pinnumber.Text),
+                    Contact
+                ) 
+            )
+        Visible: =false
+        Width: =402
+        X: =28
+        Y: =88
+        ZIndex: =10
+

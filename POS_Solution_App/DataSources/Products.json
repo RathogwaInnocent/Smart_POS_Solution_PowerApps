@@ -1,0 +1,142 @@
+[
+  {
+    "CdsFCBContext": "{\"FileType\":true,\"ImageExternalStorage\":true}",
+    "EntitySetName": "tb_products",
+    "IsHidden": false,
+    "IsSampleData": false,
+    "IsWritable": true,
+    "LogicalName": "tb_product",
+    "Name": "Products",
+    "NativeCDSDataSourceInfoNameMapping": {
+      "_ownerid_value": "Owner",
+      "createdby": "Created By",
+      "createdon": "Created On",
+      "createdonbehalfby": "Created By (Delegate)",
+      "exchangerate": "Exchange Rate",
+      "importsequencenumber": "Import Sequence Number",
+      "modifiedby": "Modified By",
+      "modifiedon": "Modified On",
+      "modifiedonbehalfby": "Modified By (Delegate)",
+      "overriddencreatedon": "Record Created On",
+      "owningbusinessunit": "Owning Business Unit",
+      "owningteam": "Owning Team",
+      "owninguser": "Owning User",
+      "statecode": "Status",
+      "statuscode": "Status Reason",
+      "tb_available": "Available",
+      "tb_available_date": "Available (Last Updated On)",
+      "tb_available_state": "Available (State)",
+      "tb_category": "Category",
+      "tb_damage": "Damage",
+      "tb_damage_date": "Damage (Last Updated On)",
+      "tb_damage_state": "Damage (State)",
+      "tb_image": "Image",
+      "tb_imageid": "tb_ImageId",
+      "tb_name": "Name",
+      "tb_product_AsyncOperations": "System Jobs",
+      "tb_product_BulkDeleteFailures": "Bulk Delete Failures",
+      "tb_product_DuplicateBaseRecord": "Duplicate Records (tb_product_DuplicateBaseRecord)",
+      "tb_product_DuplicateMatchingRecord": "Duplicate Records (tb_product_DuplicateMatchingRecord)",
+      "tb_product_MailboxTrackingFolders": "Mailbox Auto Tracking Folders",
+      "tb_product_PrincipalObjectAttributeAccesses": "Field Sharing",
+      "tb_product_ProcessSession": "Process Sessions",
+      "tb_product_SyncErrors": "Sync Errors",
+      "tb_productcode": "Product Code",
+      "tb_productid": "Product",
+      "tb_purchaseprice": "Purchase Price",
+      "tb_purchaseprice_base": "Purchase Price (Base)",
+      "tb_reserved": "Reserved",
+      "tb_reserved_date": "Reserved (Last Updated On)",
+      "tb_reserved_state": "Reserved (State)",
+      "tb_sellingprice": "Selling Price",
+      "tb_sellingprice_base": "Selling Price (Base)",
+      "tb_sold": "Sold",
+      "tb_sold_date": "Sold (Last Updated On)",
+      "tb_sold_state": "Sold (State)",
+      "tb_tb_items_Product_tb_product": "Items",
+      "tb_tb_orderproducts_Product_tb_product": "Order Products",
+      "timezoneruleversionnumber": "Time Zone Rule Version Number",
+      "transactioncurrencyid": "Currency",
+      "utcconversiontimezonecode": "UTC Conversion Time Zone Code",
+      "versionnumber": "Version Number"
+    },
+    "PreferredName": "Products",
+    "Type": "NativeCDSDataSourceInfo"
+  },
+  {
+    "DisplayName": "Products (Views)",
+    "Name": "_tb_product_views",
+    "RelatedEntityName": "Products",
+    "TrimmedViewName": true,
+    "Type": "ViewInfo",
+    "ViewInfoNameMapping": {
+      "11384224-10b2-414c-8716-1cd07ab08502": "Inactive Products",
+      "b6aac5ed-7b62-40df-a62b-1ce54db13a42": "Active Products",
+      "ce39d21f-2a27-4b87-ae74-75602214b888": "Product Lookup View",
+      "f66902a7-1583-4a2d-888d-9f4c26ea30c6": "Product Associated View",
+      "fd866871-36a8-45fa-bd34-398c560211aa": "Product Advanced Find View"
+    }
+  },
+  {
+    "DisplayName": "Category",
+    "Name": "tb_category",
+    "OptionSetInfoNameMapping": {
+      "1": "Fruit and Veg",
+      "2": "Meat",
+      "3": "Soft Drinks",
+      "4": "General"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": true,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "tb_category",
+        "OptionSetReferenceEntityName": "Products"
+      }
+    },
+    "OptionSetTypeKey": "PicklistType",
+    "RelatedColumnInvariantName": "tb_category",
+    "RelatedEntityName": "Products",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Status (Products)",
+    "Name": "tb_product_statecode",
+    "OptionSetInfoNameMapping": {
+      "0": "Active",
+      "1": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statecode",
+        "OptionSetReferenceEntityName": "Products"
+      }
+    },
+    "OptionSetTypeKey": "StateType",
+    "RelatedColumnInvariantName": "statecode",
+    "RelatedEntityName": "Products",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Status Reason (Products)",
+    "Name": "tb_product_statuscode",
+    "OptionSetInfoNameMapping": {
+      "1": "Active",
+      "2": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statuscode",
+        "OptionSetReferenceEntityName": "Products"
+      }
+    },
+    "OptionSetTypeKey": "StatusType",
+    "RelatedColumnInvariantName": "statuscode",
+    "RelatedEntityName": "Products",
+    "Type": "OptionSetInfo"
+  }
+]

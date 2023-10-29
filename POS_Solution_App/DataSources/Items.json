@@ -1,0 +1,133 @@
+[
+  {
+    "CdsFCBContext": "{\"FileType\":true,\"ImageExternalStorage\":true}",
+    "EntitySetName": "tb_itemses",
+    "IsHidden": false,
+    "IsSampleData": false,
+    "IsWritable": true,
+    "LogicalName": "tb_items",
+    "Name": "Items",
+    "NativeCDSDataSourceInfoNameMapping": {
+      "_ownerid_value": "Owner",
+      "createdby": "Created By",
+      "createdon": "Created On",
+      "createdonbehalfby": "Created By (Delegate)",
+      "exchangerate": "Exchange Rate",
+      "importsequencenumber": "Import Sequence Number",
+      "modifiedby": "Modified By",
+      "modifiedon": "Modified On",
+      "modifiedonbehalfby": "Modified By (Delegate)",
+      "overriddencreatedon": "Record Created On",
+      "owningbusinessunit": "Owning Business Unit",
+      "owningteam": "Owning Team",
+      "owninguser": "Owning User",
+      "statecode": "Status",
+      "statuscode": "Status Reason",
+      "tb_availability": "Availability ",
+      "tb_costprice": "Cost Price",
+      "tb_costprice_base": "Cost Price (Base)",
+      "tb_expirydate": "Expiry Date",
+      "tb_image": "Image",
+      "tb_imageid": "tb_ImageId",
+      "tb_isle": "Isle",
+      "tb_items_AsyncOperations": "System Jobs",
+      "tb_items_BulkDeleteFailures": "Bulk Delete Failures",
+      "tb_items_DuplicateBaseRecord": "Duplicate Records (tb_items_DuplicateBaseRecord)",
+      "tb_items_DuplicateMatchingRecord": "Duplicate Records (tb_items_DuplicateMatchingRecord)",
+      "tb_items_MailboxTrackingFolders": "Mailbox Auto Tracking Folders",
+      "tb_items_PrincipalObjectAttributeAccesses": "Field Sharing",
+      "tb_items_ProcessSession": "Process Sessions",
+      "tb_items_SyncErrors": "Sync Errors",
+      "tb_itemsid": "Items",
+      "tb_markupper": "Markup %",
+      "tb_name": "Name",
+      "tb_Product": "Product",
+      "tb_productcode": "Product Code",
+      "tb_sellingprice": "Selling Price",
+      "tb_sellingprice_base": "Selling Price (Base)",
+      "tb_shelf": "Shelf",
+      "timezoneruleversionnumber": "Time Zone Rule Version Number",
+      "transactioncurrencyid": "Currency",
+      "utcconversiontimezonecode": "UTC Conversion Time Zone Code",
+      "versionnumber": "Version Number"
+    },
+    "PreferredName": "Items",
+    "Type": "NativeCDSDataSourceInfo"
+  },
+  {
+    "DisplayName": "Items (Views)",
+    "Name": "_tb_items_views",
+    "RelatedEntityName": "Items",
+    "TrimmedViewName": true,
+    "Type": "ViewInfo",
+    "ViewInfoNameMapping": {
+      "30338236-b1a3-4391-8392-90449baa620a": "Items Advanced Find View",
+      "4be01af6-4b2a-4dfc-98ab-446058610bc8": "Inactive Items",
+      "6850e4b7-c097-45eb-815e-e88d751a523e": "Items Lookup View",
+      "b8896d15-209a-443d-8700-e354b4e34211": "Active Items",
+      "e9b3efb7-62d9-405a-b471-92df58ac9f3a": "Items Associated View"
+    }
+  },
+  {
+    "DisplayName": "Availability ",
+    "Name": "tb_availability",
+    "OptionSetInfoNameMapping": {
+      "1": "Sold",
+      "2": "Reserved",
+      "3": "Damaged",
+      "4": "Available"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": true,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "tb_availability",
+        "OptionSetReferenceEntityName": "Items"
+      }
+    },
+    "OptionSetTypeKey": "PicklistType",
+    "RelatedColumnInvariantName": "tb_availability",
+    "RelatedEntityName": "Items",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Status (Items)",
+    "Name": "tb_items_statecode",
+    "OptionSetInfoNameMapping": {
+      "0": "Active",
+      "1": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statecode",
+        "OptionSetReferenceEntityName": "Items"
+      }
+    },
+    "OptionSetTypeKey": "StateType",
+    "RelatedColumnInvariantName": "statecode",
+    "RelatedEntityName": "Items",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Status Reason (Items)",
+    "Name": "tb_items_statuscode",
+    "OptionSetInfoNameMapping": {
+      "1": "Active",
+      "2": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statuscode",
+        "OptionSetReferenceEntityName": "Items"
+      }
+    },
+    "OptionSetTypeKey": "StatusType",
+    "RelatedColumnInvariantName": "statuscode",
+    "RelatedEntityName": "Items",
+    "Type": "OptionSetInfo"
+  }
+]

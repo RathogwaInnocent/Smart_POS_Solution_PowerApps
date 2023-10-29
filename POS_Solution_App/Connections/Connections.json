@@ -1,0 +1,98 @@
+{
+  "23edad4d-932b-47c8-bbf6-943e48f15986": {
+    "appActions": [
+      "Run"
+    ],
+    "connectionRef": {
+      "apiTier": "Standard",
+      "displayName": "Logic flows",
+      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1664/1.0.1664.3477/logicflows/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_logicflows",
+      "parameterHints": {
+        "befc512d-2586-4751-90b1-2206089df504": {
+          "value": "shared_commondataserviceforapps"
+        },
+        "workflowEntityId": {},
+        "workflowName": {
+          "value": "b99dcd18-d63c-46fa-8f48-98764323ebdf"
+        }
+      },
+      "parameterHintsV2": {
+        "shared_commondataserviceforapps": {
+          "value": "befc512d-2586-4751-90b1-2206089df504"
+        },
+        "workflowEntityId": {},
+        "workflowName": {
+          "value": "b99dcd18-d63c-46fa-8f48-98764323ebdf"
+        }
+      }
+    },
+    "datasets": {},
+    "dataSources": [
+      "CancelSale"
+    ],
+    "dependencies": {
+      "shared_commondataserviceforapps": "befc512d-2586-4751-90b1-2206089df504"
+    },
+    "dependents": [],
+    "id": "23edad4d-932b-47c8-bbf6-943e48f15986"
+  },
+  "94ca4680-4d22-4d75-a581-61bf868ffd5a": {
+    "appActions": [
+      "Run"
+    ],
+    "connectionRef": {
+      "apiTier": "Standard",
+      "displayName": "Logic flows",
+      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1664/1.0.1664.3477/logicflows/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_logicflows",
+      "parameterHints": {
+        "befc512d-2586-4751-90b1-2206089df504": {
+          "value": "shared_commondataserviceforapps"
+        },
+        "workflowEntityId": {},
+        "workflowName": {
+          "value": "e07be622-98da-48f5-9f55-31bedaa423c4"
+        }
+      },
+      "parameterHintsV2": {
+        "shared_commondataserviceforapps": {
+          "value": "befc512d-2586-4751-90b1-2206089df504"
+        },
+        "workflowEntityId": {},
+        "workflowName": {
+          "value": "e07be622-98da-48f5-9f55-31bedaa423c4"
+        }
+      }
+    },
+    "datasets": {},
+    "dataSources": [
+      "CreateReceipt"
+    ],
+    "dependencies": {
+      "shared_commondataserviceforapps": "befc512d-2586-4751-90b1-2206089df504"
+    },
+    "dependents": [],
+    "id": "94ca4680-4d22-4d75-a581-61bf868ffd5a"
+  },
+  "befc512d-2586-4751-90b1-2206089df504": {
+    "appActions": [],
+    "connectionRef": {
+      "apiTier": "Premium",
+      "bypassConsent": true,
+      "displayName": "Microsoft Dataverse",
+      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1664/1.0.1664.3477/commondataserviceforapps/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_commondataserviceforapps",
+      "parameterHints": {},
+      "parameterHintsV2": {}
+    },
+    "datasets": {},
+    "dataSources": [],
+    "dependencies": {},
+    "dependents": [
+      "23edad4d-932b-47c8-bbf6-943e48f15986",
+      "94ca4680-4d22-4d75-a581-61bf868ffd5a"
+    ],
+    "id": "befc512d-2586-4751-90b1-2206089df504"
+  }
+}

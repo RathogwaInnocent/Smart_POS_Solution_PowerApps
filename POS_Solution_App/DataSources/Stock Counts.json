@@ -1,0 +1,100 @@
+[
+  {
+    "CdsFCBContext": "{\"FileType\":true,\"ImageExternalStorage\":true}",
+    "EntitySetName": "tb_stockcounts",
+    "IsHidden": false,
+    "IsSampleData": false,
+    "IsWritable": true,
+    "LogicalName": "tb_stockcount",
+    "Name": "Stock Counts",
+    "NativeCDSDataSourceInfoNameMapping": {
+      "_ownerid_value": "Owner",
+      "{Attachments}": "Attachments",
+      "createdby": "Created By",
+      "createdon": "Created On",
+      "createdonbehalfby": "Created By (Delegate)",
+      "importsequencenumber": "Import Sequence Number",
+      "modifiedby": "Modified By",
+      "modifiedon": "Modified On",
+      "modifiedonbehalfby": "Modified By (Delegate)",
+      "overriddencreatedon": "Record Created On",
+      "owningbusinessunit": "Owning Business Unit",
+      "owningteam": "Owning Team",
+      "owninguser": "Owning User",
+      "statecode": "Status",
+      "statuscode": "Status Reason",
+      "tb_CountedBy": "Counted By",
+      "tb_name": "Name",
+      "tb_stockcount_Annotations": "Notes",
+      "tb_stockcount_AsyncOperations": "System Jobs",
+      "tb_stockcount_BulkDeleteFailures": "Bulk Delete Failures",
+      "tb_stockcount_DuplicateBaseRecord": "Duplicate Records (tb_stockcount_DuplicateBaseRecord)",
+      "tb_stockcount_DuplicateMatchingRecord": "Duplicate Records (tb_stockcount_DuplicateMatchingRecord)",
+      "tb_stockcount_MailboxTrackingFolders": "Mailbox Auto Tracking Folders",
+      "tb_stockcount_PrincipalObjectAttributeAccesses": "Field Sharing",
+      "tb_stockcount_ProcessSession": "Process Sessions",
+      "tb_stockcount_SyncErrors": "Sync Errors",
+      "tb_stockcountid": "Stock Count",
+      "tb_tb_stockcountitem_StockCountRecord_tb_sto": "Stock Count Items",
+      "timezoneruleversionnumber": "Time Zone Rule Version Number",
+      "utcconversiontimezonecode": "UTC Conversion Time Zone Code",
+      "versionnumber": "Version Number"
+    },
+    "PreferredName": "Stock Counts",
+    "Type": "NativeCDSDataSourceInfo"
+  },
+  {
+    "DisplayName": "Stock Counts (Views)",
+    "Name": "_tb_stockcount_views",
+    "RelatedEntityName": "Stock Counts",
+    "TrimmedViewName": true,
+    "Type": "ViewInfo",
+    "ViewInfoNameMapping": {
+      "18d0931c-3681-4b67-bb67-83e8d88a2ee6": "Stock Count Advanced Find View",
+      "45901a8a-e6a7-4b5f-a6cf-ddb3329bcd35": "Active Stock Counts",
+      "a4267d23-6f78-43ea-8718-2c1e16b58a3c": "Inactive Stock Counts",
+      "df9212ce-e9a1-4fa3-820c-f805cb8a19d0": "Stock Count Lookup View",
+      "e8ba3f0d-ceb6-4a4e-b147-e2e3710cb268": "Stock Count Associated View"
+    }
+  },
+  {
+    "DisplayName": "Status (Stock Counts)",
+    "Name": "tb_stockcount_statecode",
+    "OptionSetInfoNameMapping": {
+      "0": "Active",
+      "1": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statecode",
+        "OptionSetReferenceEntityName": "Stock Counts"
+      }
+    },
+    "OptionSetTypeKey": "StateType",
+    "RelatedColumnInvariantName": "statecode",
+    "RelatedEntityName": "Stock Counts",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Status Reason (Stock Counts)",
+    "Name": "tb_stockcount_statuscode",
+    "OptionSetInfoNameMapping": {
+      "1": "Active",
+      "2": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statuscode",
+        "OptionSetReferenceEntityName": "Stock Counts"
+      }
+    },
+    "OptionSetTypeKey": "StatusType",
+    "RelatedColumnInvariantName": "statuscode",
+    "RelatedEntityName": "Stock Counts",
+    "Type": "OptionSetInfo"
+  }
+]

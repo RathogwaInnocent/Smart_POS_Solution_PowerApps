@@ -1,0 +1,109 @@
+[
+  {
+    "CdsFCBContext": "{\"FileType\":true,\"ImageExternalStorage\":true}",
+    "EntitySetName": "tb_endofshifts",
+    "IsHidden": false,
+    "IsSampleData": false,
+    "IsWritable": true,
+    "LogicalName": "tb_endofshift",
+    "Name": "End of Shifts",
+    "NativeCDSDataSourceInfoNameMapping": {
+      "_ownerid_value": "Owner",
+      "createdby": "Created By",
+      "createdon": "Created On",
+      "createdonbehalfby": "Created By (Delegate)",
+      "exchangerate": "Exchange Rate",
+      "importsequencenumber": "Import Sequence Number",
+      "modifiedby": "Modified By",
+      "modifiedon": "Modified On",
+      "modifiedonbehalfby": "Modified By (Delegate)",
+      "overriddencreatedon": "Record Created On",
+      "owningbusinessunit": "Owning Business Unit",
+      "owningteam": "Owning Team",
+      "owninguser": "Owning User",
+      "statecode": "Status",
+      "statuscode": "Status Reason",
+      "tb_balance": "Balance",
+      "tb_balance_base": "Balance (Base)",
+      "tb_cashcount": "Cash Count",
+      "tb_cashcount_base": "Cash Count (Base)",
+      "tb_Cashier": "Cashier",
+      "tb_cashuptotal": "Cash Up Total",
+      "tb_cashuptotal_base": "Cash Up Total (Base)",
+      "tb_endofshift_AsyncOperations": "System Jobs",
+      "tb_endofshift_BulkDeleteFailures": "Bulk Delete Failures",
+      "tb_endofshift_DuplicateBaseRecord": "Duplicate Records (tb_endofshift_DuplicateBaseRecord)",
+      "tb_endofshift_DuplicateMatchingRecord": "Duplicate Records (tb_endofshift_DuplicateMatchingRecord)",
+      "tb_endofshift_MailboxTrackingFolders": "Mailbox Auto Tracking Folders",
+      "tb_endofshift_PrincipalObjectAttributeAccesses": "Field Sharing",
+      "tb_endofshift_ProcessSession": "Process Sessions",
+      "tb_endofshift_SyncErrors": "Sync Errors",
+      "tb_endofshiftid": "End of Shift ",
+      "tb_float": "Float",
+      "tb_float_base": "Float (Base)",
+      "tb_name": "Name",
+      "tb_sales": "Sales",
+      "tb_totalcustomer": "Total Customer",
+      "timezoneruleversionnumber": "Time Zone Rule Version Number",
+      "transactioncurrencyid": "Currency",
+      "utcconversiontimezonecode": "UTC Conversion Time Zone Code",
+      "versionnumber": "Version Number"
+    },
+    "PreferredName": "End of Shifts",
+    "Type": "NativeCDSDataSourceInfo"
+  },
+  {
+    "DisplayName": "End of Shifts (Views)",
+    "Name": "_tb_endofshift_views",
+    "RelatedEntityName": "End of Shifts",
+    "TrimmedViewName": true,
+    "Type": "ViewInfo",
+    "ViewInfoNameMapping": {
+      "1f02aebe-600b-4622-aa4c-32ad9344f00b": "Active End of Shifts",
+      "70be9605-000f-4a48-b13a-027a7685163c": "Inactive End of Shifts",
+      "9050115f-e8dd-4161-b1e2-aa62592737c5": "End of Shift  Advanced Find View",
+      "a48623d4-cb4b-4a00-b760-1a0774b699cb": "End of Shift  Associated View",
+      "fb23c735-03d7-4034-999e-dc91772f0600": "End of Shift  Lookup View"
+    }
+  },
+  {
+    "DisplayName": "Status (End of Shifts)",
+    "Name": "tb_endofshift_statecode",
+    "OptionSetInfoNameMapping": {
+      "0": "Active",
+      "1": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statecode",
+        "OptionSetReferenceEntityName": "End of Shifts"
+      }
+    },
+    "OptionSetTypeKey": "StateType",
+    "RelatedColumnInvariantName": "statecode",
+    "RelatedEntityName": "End of Shifts",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Status Reason (End of Shifts)",
+    "Name": "tb_endofshift_statuscode",
+    "OptionSetInfoNameMapping": {
+      "1": "Active",
+      "2": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statuscode",
+        "OptionSetReferenceEntityName": "End of Shifts"
+      }
+    },
+    "OptionSetTypeKey": "StatusType",
+    "RelatedColumnInvariantName": "statuscode",
+    "RelatedEntityName": "End of Shifts",
+    "Type": "OptionSetInfo"
+  }
+]
