@@ -174,86 +174,6 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "home.cashiericon.OnSelect"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "home.cashiericon.OnSelect",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 13,
-                  "charOffset": 64,
-                  "snippet": {
-                    "text": "Text(Contact)"
-                  }
-                }
-              },
-              "properties": {
-                "member": "OnSelect",
-                "module": "home",
-                "type": "home.cashiericon"
-              }
-            }
-          ],
-          "message": {
-            "arguments": [
-              "Text"
-            ],
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-SuggestRemoteExecutionHint",
-          "ruleIndex": 0
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "home.cashiericon.OnSelect"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "home.cashiericon.OnSelect",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 1,
-                  "charOffset": 78,
-                  "snippet": {
-                    "text": "="
-                  }
-                }
-              },
-              "properties": {
-                "member": "OnSelect",
-                "module": "home",
-                "type": "home.cashiericon"
-              }
-            }
-          ],
-          "message": {
-            "arguments": [
-              "LookUp"
-            ],
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-SuggestRemoteExecutionHint",
-          "ruleIndex": 0
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
                   "fullyQualifiedName": "home.Button2.OnSelect"
                 }
               ],
@@ -1185,6 +1105,36 @@
               },
               "properties": {
                 "member": "home_background",
+                "module": "App",
+                "type": "App"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-UnusedMediaResources",
+          "ruleIndex": 4
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "App.cash_register_icon"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "App.cash_register_icon",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "cash_register_icon",
                 "module": "App",
                 "type": "App"
               }
