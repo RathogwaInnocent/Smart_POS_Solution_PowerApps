@@ -109,7 +109,7 @@ home As screen:
         Width: =755
         ZIndex: =11
 
-    Button2 As button:
+    BTN_login As button:
         Fill: =RGBA(31, 67, 139, 1)
         Height: =43
         OnSelect: |-

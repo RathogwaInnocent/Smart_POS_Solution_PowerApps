@@ -174,12 +174,12 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "home.Button2.OnSelect"
+                  "fullyQualifiedName": "home.BTN_login.OnSelect"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "home.Button2.OnSelect",
+                  "fullyQualifiedName": "home.BTN_login.OnSelect",
                   "relativeAddress": 0
                 },
                 "region": {
@@ -193,7 +193,7 @@
               "properties": {
                 "member": "OnSelect",
                 "module": "home",
-                "type": "home.Button2"
+                "type": "home.BTN_login"
               }
             }
           ],
@@ -214,12 +214,12 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "home.Button2.OnSelect"
+                  "fullyQualifiedName": "home.BTN_login.OnSelect"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "home.Button2.OnSelect",
+                  "fullyQualifiedName": "home.BTN_login.OnSelect",
                   "relativeAddress": 0
                 },
                 "region": {
@@ -233,7 +233,7 @@
               "properties": {
                 "member": "OnSelect",
                 "module": "home",
-                "type": "home.Button2"
+                "type": "home.BTN_login"
               }
             }
           ],
