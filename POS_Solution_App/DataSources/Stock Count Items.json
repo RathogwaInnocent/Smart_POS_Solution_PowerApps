@@ -6,6 +6,7 @@
     "IsSampleData": false,
     "IsWritable": true,
     "LogicalName": "tb_stockcountitem",
+    "MaxGetRowsCount": 500,
     "Name": "Stock Count Items",
     "NativeCDSDataSourceInfoNameMapping": {
       "_ownerid_value": "Owner",

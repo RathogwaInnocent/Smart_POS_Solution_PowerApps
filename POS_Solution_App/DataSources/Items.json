@@ -6,6 +6,7 @@
     "IsSampleData": false,
     "IsWritable": true,
     "LogicalName": "tb_items",
+    "MaxGetRowsCount": 500,
     "Name": "Items",
     "NativeCDSDataSourceInfoNameMapping": {
       "_ownerid_value": "Owner",

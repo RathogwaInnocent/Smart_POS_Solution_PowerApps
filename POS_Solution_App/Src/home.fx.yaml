@@ -3,13 +3,6 @@ home As screen:
         =UpdateContext({resettext: !resettext});
         UpdateContext({resettext: !resettext})
 
-    heroimage As image:
-        Height: =768
-        Image: =home_background
-        Width: =919
-        X: =447
-        ZIndex: =1
-
     lefttitle As label:
         Color: =RGBA(115, 115, 115, 1)
         Fill: =RGBA(255, 255, 255, 1)
@@ -19,8 +12,8 @@ home As screen:
         Size: =21
         Text: ="Start Shift"
         Width: =192
-        X: =60
-        Y: =184
+        X: =944
+        Y: =162
         ZIndex: =2
 
     cashierid As text:
@@ -29,8 +22,8 @@ home As screen:
         HintText: ="Cashier ID"
         Italic: =true
         Reset: =resettext
-        X: =60
-        Y: =239
+        X: =880
+        Y: =237
         ZIndex: =3
 
     startingfloat As text:
@@ -39,8 +32,8 @@ home As screen:
         HintText: ="Starting Float"
         Italic: =true
         Reset: =resettext
-        X: =60
-        Y: =309
+        X: =895
+        Y: =310
         ZIndex: =4
 
     pinnumber As text:
@@ -49,8 +42,8 @@ home As screen:
         HintText: ="PIN Number"
         Italic: =true
         Reset: =resettext
-        X: =60
-        Y: =383
+        X: =916
+        Y: =392
         ZIndex: =5
 
     cashiericon As image:
@@ -81,8 +74,8 @@ home As screen:
         PaddingRight: =10
         PaddingTop: =10
         Visible: =If(IsBlank(contactrecordid.Text), false,true)
-        X: =60
-        Y: =444
+        X: =928
+        Y: =488
         ZIndex: =6
 
     stocktakeicon As image:
@@ -92,8 +85,8 @@ home As screen:
         PaddingRight: =10
         PaddingTop: =10
         Visible: =If(IsBlank(contactrecordid.Text), false,true)   
-        X: =222
-        Y: =444
+        X: =1164
+        Y: =471
         ZIndex: =7
 
     welcometitle As label:
@@ -136,7 +129,13 @@ home As screen:
             )
         Visible: =false
         Width: =402
-        X: =28
-        Y: =88
+        X: =862
+        Y: =59
         ZIndex: =10
+
+    heroimage As image:
+        Height: =768
+        Image: ='POS Main'
+        Width: =755
+        ZIndex: =11
 

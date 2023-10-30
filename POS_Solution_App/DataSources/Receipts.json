@@ -6,6 +6,7 @@
     "IsSampleData": false,
     "IsWritable": true,
     "LogicalName": "tb_receipt",
+    "MaxGetRowsCount": 500,
     "Name": "Receipts",
     "NativeCDSDataSourceInfoNameMapping": {
       "_ownerid_value": "Owner",
